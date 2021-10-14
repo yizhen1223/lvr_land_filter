@@ -11,12 +11,8 @@ df_e = pd.read_csv(path_in+'e_lvr_land_a.csv', encoding='utf-8').drop([0], axis=
 df_f = pd.read_csv(path_in+'f_lvr_land_a.csv', encoding='utf-8').drop([0], axis=0)
 df_h = pd.read_csv(path_in+'h_lvr_land_a.csv', encoding='utf-8').drop([0], axis=0)
 
-# 取欄位列表
-columns = df_a.columns
-
 # 四個縣市的資料合併
 df_all = pd.concat([df_a, df_b, df_e, df_f, df_h], ignore_index=True)
-
 
 
 # 定義條件式，篩選出來放在暫存df(filter_temp)
